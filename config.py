@@ -8,13 +8,13 @@ NUM_WORKERS = 2 # Number of parallel workers for data loading.
 DEVICE = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
 # Training images and XML files directory.
-TRAIN_DIR = 'data/License Plate Recognition.v1-raw-images.voc/train'
+TRAIN_DIR = 'data/ganoderma/train'
 # Validation images and XML files directory.
-VALID_DIR = 'data/License Plate Recognition.v1-raw-images.voc/valid'
+VALID_DIR = 'data/ganoderma/valid'
 
 # Classes: 0 index is reserved for background.
 CLASSES = [
-    '__background__', 'License_Plate'
+    '__background__', 'ganoderma', 'primordium'
 ]
 
 NUM_CLASSES = len(CLASSES)
