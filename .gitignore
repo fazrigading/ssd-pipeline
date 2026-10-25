@@ -2,7 +2,8 @@
 .codegraph/
 __pycache__/
 *.pyc
-data/
+data/*
+!data/example/
 outputs/
 inference_outputs/
 *.pth

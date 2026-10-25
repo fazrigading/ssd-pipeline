@@ -1,0 +1,26 @@
+<annotation>
+	<folder>example</folder>
+	<filename>image_1.jpg</filename>
+	<path>data/example/valid/image_1.jpg</path>
+	<source>
+		<database>ssd-pipeline example</database>
+	</source>
+	<size>
+		<width>320</width>
+		<height>240</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>ganoderma</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>50</xmin>
+			<ymin>20</ymin>
+			<xmax>240</xmax>
+			<ymax>210</ymax>
+		</bndbox>
+	</object>
+</annotation>

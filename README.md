@@ -14,7 +14,7 @@ train.py                        # training loop; saves best model + plots to out
 eval.py                         # validation mAP evaluation; saves mAP.png
 inference.py                    # image directory detection; draws boxes to inference_outputs/
 inference_video.py              # video inference; writes annotated video
-data/ganoderma/{train,valid}/   # images + XML annotations (not in repo)
+data/example/{train,valid}/     # committed example: sample images + VOC XML annotations
 outputs/                        # model checkpoints and training plots
 ```
 
@@ -29,10 +29,12 @@ python -m pip install torch torchvision albumentations opencv-python torchmetric
 Each split directory holds images (`.jpg`, `.jpeg`, `.png`) with a matching Pascal VOC `.xml` per image:
 
 ```
-data/ganoderma/train/
+data/example/train/
   image_1.jpg
   image_1.xml
 ```
+
+A complete example with both splits — matching the default `CLASSES` and verified to load — lives in [`data/example/`](data/example/). Copy it as a starting point for your own data.
 
 Configure split paths and class list in `ssd_pipeline/config.py`.
 
@@ -63,6 +65,8 @@ my_dataset/
   train/     # ~80% of images + matching .xml files
   valid/     # ~20%, no overlap with train
 ```
+
+See [`data/example/`](data/example/) for the exact layout (a real `train/` and `valid/` pair with one annotation each). Note `data/example/` is the only folder under `data/` tracked by git; your datasets stay local.
 
 ### 3. Configure
 
