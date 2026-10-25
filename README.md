@@ -34,7 +34,7 @@ data/example/train/
   image_1.xml
 ```
 
-A complete example with both splits — matching the default `CLASSES` and verified to load — lives in [`data/example/`](data/example/). Copy it as a starting point for your own data.
+A complete example with both splits, matching the default `CLASSES` and verified to load, lives in [`data/example/`](data/example/). Copy it as a starting point for your own data.
 
 Configure split paths and class list in `ssd_pipeline/config.py`.
 
@@ -42,7 +42,7 @@ Configure split paths and class list in `ssd_pipeline/config.py`.
 
 ### 1. Annotate
 
-Annotate your images in [Pascal VOC XML format](https://towardsdatascience.com/a-guide-to-building-pascal-voc-dataset-in-under-one-hour-a-beginner-s-tutorial-3e0b54c9ab45) — one `.xml` per image, same base filename (`image_1.jpg` + `image_1.xml`). Any tool that exports Pascal VOC works: [LabelImg](https://github.com/HumanSignal/labelImg), [Roboflow](https://roboflow.com), CVAT. Each annotated object looks like:
+Annotate your images in [Pascal VOC XML format](https://towardsdatascience.com/a-guide-to-building-pascal-voc-dataset-in-under-one-hour-a-beginner-s-tutorial-3e0b54c9ab45), one `.xml` per image, same base filename (`image_1.jpg` + `image_1.xml`). Any tool that exports Pascal VOC works: [LabelImg](https://github.com/HumanSignal/labelImg), [Roboflow](https://roboflow.com), CVAT. Each annotated object looks like:
 
 ```xml
 <object>
@@ -83,7 +83,7 @@ CLASSES = [
 ]
 ```
 
-Optional knobs: `RESIZE_TO` (input size, 640 default — inference must use the same, `--imgsz`), `BATCH_SIZE` (set by GPU memory), `NUM_EPOCHS` (100 default).
+Optional knobs: `RESIZE_TO` (input size, 640 default, inference must use the same, `--imgsz`), `BATCH_SIZE` (set by GPU memory), `NUM_EPOCHS` (100 default).
 
 ### 4. Sanity check
 
@@ -144,9 +144,11 @@ All settings are placed in `ssd_pipeline/config.py`: batch size, epochs, image s
 
 ## License
 
-[MIT](LICENSE). Contributions welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+[MIT](LICENSE). 
+
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Author
 
-Fazri Gading — [GitHub](https://github.com/fazrigading) · fazrigading@gmail.com
+Fazri Gading [GitHub](https://github.com/fazrigading). Email: fazrigading@gmail.com
 
