@@ -142,3 +142,7 @@ All knobs live in `ssd_pipeline/config.py`: batch size, epochs, image size, data
 
 [MIT](LICENSE). Contributions welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Author
+
+Fazri Gading — [GitHub](https://github.com/fazrigading) · fazrigading@gmail.com
+
