@@ -20,7 +20,7 @@ outputs/                        # model checkpoints and training plots
 
 ## Setup
 
-```
+```bash
 python -m pip install torch torchvision albumentations opencv-python torchmetrics matplotlib tqdm
 ```
 
@@ -89,7 +89,7 @@ Optional knobs: `RESIZE_TO` (input size, 640 default — inference must use the 
 
 Verify annotations load before burning GPU hours:
 
-```
+```bash
 python -c "from ssd_pipeline.datasets import CustomDataset; from ssd_pipeline.config import TRAIN_DIR, RESIZE_TO, CLASSES; d = CustomDataset(TRAIN_DIR, RESIZE_TO, RESIZE_TO, CLASSES); print(len(d), 'images'); print(d[0][1]['labels'])"
 ```
 
@@ -97,42 +97,42 @@ Expected: an image count and label tensor like `tensor([1, 2, 1])`. Or run `pyth
 
 ### 5. Train and check
 
-```
+```bash
 python train.py     # saves outputs/best_model.pth + loss/mAP plots
 python eval.py      # prints validation mAP
 ```
 
 ### 6. Inference
 
-```
+```bash
 python inference.py -i my_dataset/valid --threshold 0.25
 ```
 
 Video inference works with the same trained weights:
 
-```
+```bash
 python inference_video.py -i data/video.mp4 --threshold 0.25
 ```
 
 ## Usage (original splits)
 
 Train:
-```
+```bash
 python train.py
 ```
 
 Evaluate mAP on the validation set:
-```
+```bash
 python eval.py
 ```
 
 Run inference (images):
-```
+```bash
 python inference.py -i data/ganoderma/valid --threshold 0.25
 ```
 
 Run inference (video):
-```
+```bash
 python inference_video.py -i data/video.mp4 --threshold 0.25
 ```
 
@@ -140,7 +140,7 @@ Inference scripts require `outputs/best_model.pth` from training. Use `--imgsz` 
 
 ## Configuration
 
-All knobs live in `ssd_pipeline/config.py`: batch size, epochs, image size, data paths, class list, output dir.
+All settings are placed in `ssd_pipeline/config.py`: batch size, epochs, image size, data paths, class list, output dir.
 
 ## License
 
