@@ -1,0 +1,9 @@
+.projectmem/
+.codegraph/
+__pycache__/
+*.pyc
+data/
+outputs/
+inference_outputs/
+*.pth
+*.pt

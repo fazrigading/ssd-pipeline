@@ -1,4 +1,4 @@
-from config import (
+from ssd_pipeline.config import (
     DEVICE, 
     NUM_CLASSES, 
     NUM_EPOCHS, 
@@ -9,8 +9,8 @@ from config import (
     VALID_DIR,
     TRAIN_DIR
 )
-from model import create_model
-from custom_utils import (
+from ssd_pipeline.model import create_model
+from ssd_pipeline.custom_utils import (
     Averager, 
     SaveBestModel, 
     save_model, 
@@ -18,7 +18,7 @@ from custom_utils import (
     save_mAP
 )
 from tqdm.auto import tqdm
-from datasets import (
+from ssd_pipeline.datasets import (
     create_train_dataset, 
     create_valid_dataset, 
     create_train_loader, 
@@ -141,7 +141,7 @@ if __name__ == '__main__':
 
     # Whether to show transformed images from data loader or not.
     if VISUALIZE_TRANSFORMED_IMAGES:
-        from custom_utils import show_tranformed_image
+        from ssd_pipeline.custom_utils import show_tranformed_image
         show_tranformed_image(train_loader)
 
     # To save best model.

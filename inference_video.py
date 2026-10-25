@@ -6,8 +6,8 @@ import time
 import argparse
 import pathlib
 
-from model import create_model
-from config import (
+from ssd_pipeline.model import create_model
+from ssd_pipeline.config import (
     NUM_CLASSES, DEVICE, CLASSES
 )
 
