@@ -1,6 +1,6 @@
 # ssd-pipeline
 
-Fine-tunes a pretrained [torchvision SSD300-VGG16](https://pytorch.org/vision/stable/models/generated/torchvision.models.detection.ssd300_vgg16.html) (COCO) object detector for mushroom detection: `ganoderma` and `primordia`. 640 px input, Pascal VOC XML annotations, mAP evaluation via torchmetrics.
+Fine-tunes a pretrained [torchvision SSD300-VGG16](https://pytorch.org/vision/stable/models/generated/torchvision.models.detection.ssd300_vgg16.html) (COCO) object detector. 640 px input, Pascal VOC XML annotations, mAP evaluation via torchmetrics.
 
 ## Structure
 
