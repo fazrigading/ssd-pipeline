@@ -137,3 +137,8 @@ Inference scripts require `outputs/best_model.pth` from training. Use `--imgsz` 
 ## Configuration
 
 All knobs live in `ssd_pipeline/config.py`: batch size, epochs, image size, data paths, class list, output dir.
+
+## License
+
+[MIT](LICENSE). Contributions welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+
